@@ -24,17 +24,8 @@ rabbit = createSprite(180,340,30,30);
 rabbit.scale =0.09;
 rabbit.addImage(rabbitImg);
 
- var select_sprites = Math.round(random(1,2));
+ 
 
-
- if(frameCount % 80 == 0){
-    if(select_sprites == 1){
-      createApples();
-    }
-    else{
-      createLeaf();
-    }
- }
 
 
   }
@@ -49,6 +40,18 @@ function draw() {
   rabbit.x = World.mouseX;
   edges= createEdgeSprites();
   rabbit.collide(edges);
+
+  var select_sprites = Math.round(random(1,2));
+
+
+ if(frameCount % 80 == 0){
+  if(select_sprites == 1){
+    createApples();
+  }
+  else{
+    createLeaf();
+  }
+}
   
 
   drawSprites();
